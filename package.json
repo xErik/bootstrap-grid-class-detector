@@ -1,0 +1,34 @@
+{
+  "name": "bootstrap-grid-class-detector",
+  "version": "0.1.0",
+  "description": "Displays the currently active Bootstrap grid class in bottom/right corner of browser",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xErik/bootstrap-grid-class-detector.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "grid",
+    "class",
+    "detector",
+    "detection",
+    "browser",
+    "width",
+    "mobile",
+    "desktop",
+    "xs",
+    "sm",
+    "md",
+    "lg"
+  ],
+  "author": "xErik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xErik/bootstrap-grid-class-detector/issues"
+  },
+  "homepage": "https://github.com/xErik/bootstrap-grid-class-detector#readme"
+}
