@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-grid-class-detector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Displays the currently active Bootstrap grid class in bottom/right corner of browser",
   "main": "src/index.js",
   "scripts": {
