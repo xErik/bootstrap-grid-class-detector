@@ -18,12 +18,16 @@
     "detection",
     "browser",
     "width",
+    "height",
     "mobile",
     "desktop",
     "xs",
     "sm",
     "md",
-    "lg"
+    "lg",
+    "window",
+    "size",
+    "Angular"
   ],
   "author": "xErik",
   "license": "MIT",

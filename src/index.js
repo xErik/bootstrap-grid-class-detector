@@ -3,16 +3,20 @@
 function refreshDeviceInfo() {
 
 	var id = 'deviceInfo',
-		type = "Mobile (xs)",
+		type = "XS: 0..768",
 		widthType = 'innerWidth',
+		heightType = 'innerHeight',
 		container = document.getElementById(id),
-		width;
+		width,
+		height;
 
 	if (!('innerWidth' in window)) {
 		widthType = 'clientWidth';
+		heightType = 'clientHeight';
 		window = document.documentElement || document.body;
 	}
 	width = window[widthType];
+	height = window[heightType];
 
 	if (!container) {
 		container = document.createElement('div');
@@ -23,29 +27,35 @@ function refreshDeviceInfo() {
 	}
 
 	if (width >= 1200) {
-		type = "Large Desktop (lg)";
+		type = "LG: 1200..∞";
 	} else if (width >= 992) {
-		type = "Medium Desktop (md)";
+		type = "MD: 992..1199";
 	} else if (width >= 768) {
-		type = "Tablet (sm)";
+		type = "SM: 768..991";
 	}
+	type = '<b>' + type + ' width</b><br/>width: ' + width + ' height: ' + height + '';
 	container.innerHTML = type;
 }
 
-// refresh on resize
-if (window.addEventListener) {
-	window.addEventListener("resize", refreshDeviceInfo, false);
-} else if (window.attachEvent) {
-	window.attachEvent("onresize", refreshDeviceInfo);
-} else {
-	window.onresize = refreshDeviceInfo;
-}
+
 document.addEventListener("DOMContentLoaded", function(event) {
 	refreshDeviceInfo();
+
+	// refresh on resize
+	if (window.addEventListener) {
+		window.addEventListener("resize", refreshDeviceInfo, false);
+	} else if (window.attachEvent) {
+		window.attachEvent("onresize", refreshDeviceInfo);
+	} else {
+		window.onresize = refreshDeviceInfo;
+	}
 });
 
 
+try {
+	exports = module.exports = function() {
 
-exports = module.exports = function() {
-
-};
+	};
+} catch (e) {
+	// ignore, catches if included by script-tag
+}
