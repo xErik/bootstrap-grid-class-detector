@@ -3,7 +3,7 @@
 function refreshDeviceInfo() {
 
 	var id = 'deviceInfo',
-		type = "XS: 0..768",
+		type = "XS: 0..767",
 		widthType = 'innerWidth',
 		heightType = 'innerHeight',
 		container = document.getElementById(id),
